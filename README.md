@@ -32,8 +32,8 @@ Proyecto final de "Arquitectura y Sistemas Operativos"
 Abrir la terminal o Git Bash y ejecuta:
 
 ```bash
-git clone https://github.com/your-org/docker-final-project.git
-cd docker-final-project
+git clone https://github.com/JereFassi/utn-so-final-project.git
+cd utn-so-final-project
 ```
 
 ---
@@ -42,7 +42,7 @@ cd docker-final-project
 
 - Ir a [GitHub](https://github.com).
 - Hacer clic en **Nuevo repositorio**.
-- Elegir un nombre, por ejemplo: `docker-final-project-tu-nombre`.
+- Elegir un nombre, por ejemplo: `utn-so-final-project-tu-nombre`.
 - NO lo inicialices con README (ya tienes uno).
 - Hacer clic en **Crear repositorio**.
 
@@ -54,7 +54,7 @@ En la terminal, ejecuta:
 
 ```bash
 git remote remove origin
-git remote add origin https://github.com/tuusuario/docker-final-project-tu-nombre.git
+git remote add origin https://github.com/tuusuario/utn-so-final-project-tu-nombre.git
 ```
 
 ---
@@ -85,7 +85,7 @@ git push -u origin main
 Copia el enlace de tu repositorio:
 
 ```
-https://github.com/tuusuario/docker-final-project-tu-nombre
+https://github.com/tuusuario/utn-so-final-project-tu-nombre
 ```
 
 Y envíalo por correo y con copia a:
