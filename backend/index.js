@@ -19,6 +19,16 @@ app.get("/api/students", async (req, res) => {
     res.status(500).send("DB error");
   }
 });
+/*Tarea 01
+Esta ruta responde a /greet?name=... y devuelve un mensaje en formato JSON*/
+app.get("/greet", (req, res) => {
+  // Obtiene el parámetro 'name' de la query string
+  const name = req.query.name || "Mundo";
+  // Devuelve un objeto JSON con el saludo personalizado
+  res.json({
+    message: `¡Hola, ${name}!`
+  });
+});
 
 // Start the server
 app.listen(port, () => console.log(`App running on port ${port}`));
