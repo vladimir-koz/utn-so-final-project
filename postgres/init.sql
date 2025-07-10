@@ -4,4 +4,4 @@ CREATE TABLE students (
 );
 
 INSERT INTO students (name)
-VALUES ('Guillermo'), ('Javier'), ('Jeremías');
+VALUES ('Santino'), ('Tomás'), ('Vladimir');
