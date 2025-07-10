@@ -3,7 +3,8 @@ const db = require("./db");
 
 // Define express app
 const app = express();
-const port = 3000;
+// Cambié el puerto del backend de 3000 a 4000 como pide la Tarea 3
+const port = 4000;
 
 // Middleware to parse JSON requests
 app.use(express.json());

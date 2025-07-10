@@ -4,8 +4,9 @@ services:
   backend:
     container_name: students_backend
     build: ./backend
+    # Exponemos el puerto 4000 dentro de la red Docker
     expose:
-      - "3000"
+      - "4000"
     networks:
       - students_network
     environment:
