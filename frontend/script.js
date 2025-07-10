@@ -26,3 +26,37 @@ document.getElementById("greetButton").addEventListener("click", async () => {
     console.error(error);
   }
 });
+//Tarea 04 Evento para agregar un nuevo estudiante
+document.getElementById("botonAgregarEstudiante").addEventListener("click", async () => {
+  // Tomo el valor del input y me aseguro que no esté vacío
+  const nombre = document.getElementById("nombreEstudiante").value.trim();
+  const mensaje = document.getElementById("mensajeAgregarEstudiante");
+
+  if (!nombre) {
+    mensaje.textContent = "Por favor escribí un nombre.";
+    return;
+  }
+
+  try {
+  // Envío una solicitud POST al backend con el nombre en formato JSON
+    const respuesta = await fetch("/api/students", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name: nombre }),
+    });
+
+    if (!respuesta.ok) throw new Error("Error al agregar");
+
+    const estudiante = await respuesta.json();
+     // Muestro un mensaje con el estudiante agregado
+    mensaje.textContent = `Estudiante agregado: ${estudiante.name} (ID: ${estudiante.id})`;
+
+    // Actualizo la tabla automáticamente para que aparezca el nuevo
+    document.getElementById("loadButton").click();
+  } catch (error) {
+    console.error(error);
+    mensaje.textContent = "Error al agregar estudiante.";
+  }
+});
